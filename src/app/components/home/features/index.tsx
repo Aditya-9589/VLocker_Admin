@@ -10,16 +10,16 @@ const Features = () => {
         <div className=" gap-x-4 gap-y-4 relative z-10">
           {/* Column-1 */}
           <div className="mb-10">
-            <p className="text-primary text-base sm:text-lg font-semibold mb-4 text-center">
+            {/* <p className="text-primary text-base sm:text-lg font-semibold mb-4 text-center">
               FEATURES
-            </p>
+            </p> */}
             <h2 className="font-semibold mb-6 text-center max-w-2xl mx-auto sm:leading-14 capitalize">
-              The Most Trusted Platform for Digital Currency
+              A Trusted Platform for Smart Device Financing
             </h2>
             <p className="lg:text-lg font-normal text-lightpurple text-center max-w-2xl mx-auto ">
-              Discover powerful tools designed to help you securely buy, sell,
-              and manage your crypto assets — trusted by traders, investors, and
-              businesses worldwide.
+              Discover powerful tools designed to manage device-based loans,
+              track EMIs in real time, and enforce payment security — trusted by
+              lenders and financial partners.
             </p>
           </div>
           {/* Column-2 */}

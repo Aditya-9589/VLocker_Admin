@@ -7,20 +7,12 @@ import { WorkType } from "@/app/types/work";
 
 export const Headerdata: HeaderItem[] = [
   { label: "Home", href: "/" },
-
-  // Added services setCustomIconLoader, and removing exchange section 
-  // { label: "Exchange", href: "/#exchange-section" },
   { label: "Services", href: "/#services-section" },
-
   { label: "Features", href: "/#features-section" },
-  { label: "FAQ", href: "/#faq-section" },
-  { label: "Contact Us", href: "/#contact" },
+  // { label: "FAQ", href: "/#faq-section" },
+  // { label: "Contact Us", href: "/#contact" },
   { label: "Docs", href: "/documentation" },
-
-  // Transactions page added
   { label: "Transactions", href: "/transactions" },
-
-  // About us page added
   { label: "About Us", href: "/about" },
 ];
 
@@ -71,39 +63,39 @@ export const workdata: WorkType[] = [
 export const Featuresdata: FeatureType[] = [
   {
     imgSrc: `${basePath}/images/features/featureOne.svg`,
-    heading: "Secure Storage",
+    heading: "Secure Device Locking",
     subheading:
-      "Your crypto is protected with advanced encryption and offline cold wallets, ensuring top-tier security and privacy.",
+      "Automatically lock or unlock financed devices based on EMI payment status, ensuring security and payment compliance.",
   },
   {
     imgSrc: `${basePath}/images/features/featureTwo.svg`,
-    heading: "Free to Use",
+    heading: "Real-Time EMI Tracking",
     subheading:
-      "Enjoy powerful portfolio tracking, live analytics, and account management tools — all without any hidden fees.",
+      "Monitor installment schedules, payment history, and pending EMIs in real time with complete visibility and control.",
   },
   {
     imgSrc: `${basePath}/images/features/featureThree.svg`,
-    heading: "Real-Time Price Data",
+    heading: "Centralized Loan Management",
     subheading:
-      "Get live crypto prices, market updates, and real-time data from top global exchanges — all in one place, 24/7.",
+      "Manage customers, devices, and transactions from a single dashboard built for lenders and financial partners.",
   },
 ];
 
 export const Faqdata: FaqType[] = [
   {
-    heading: "1. What is cryptocurrency?",
+    heading: "1. What is VLocker?",
     subheading:
-      "Cryptocurrency is a digital or virtual currency secured by cryptography, making it nearly impossible to counterfeit or double-spend. It operates on decentralized networks called blockchains, allowing peer-to-peer transactions without intermediaries.",
+      "VLocker is a smart device financing and management platform that helps lenders track EMIs, manage device-based loans, and automatically lock or unlock devices based on payment status.",
   },
   {
-    heading: "2. Can cryptocurrency be converted to cash?",
+    heading: "2. How does device locking work?",
     subheading:
-      "Yes, cryptocurrencies can be converted to cash through exchanges, peer-to-peer platforms, or crypto ATMs. Many platforms allow you to sell your crypto and withdraw funds directly to your bank account.",
+      "When a customer misses an EMI, VLocker can remotely restrict device access. Once the payment is completed, the device is automatically unlocked, ensuring payment compliance and asset security.",
   },
   {
-    heading: "3. How long should you hold cryptocurrency?",
+    heading: "3. Who can use the VLocker platform?",
     subheading:
-      "The holding period depends on your investment goals. Some traders prefer short-term trading to capitalize on price volatility, while others hold long-term, believing in the asset's future value growth. Always assess your risk tolerance before deciding.",
+      "VLocker is designed for lenders, financial institutions, retailers, and partners offering device-based financing. The admin panel provides complete control over customers, loans, EMIs, and devices.",
   },
 ];
 
@@ -129,10 +121,7 @@ export const Sociallinkdata: SocialType[] = [
 export const Footerlinkdata: FooterType[] = [
   { label: "Home", href: "/" },
 
-  // changing footerlink data for services section 
-  // { label: "Exchange", href: "/#exchange-section" },
   { label: "Services", href: "/#services-section" },
-
   { label: "Features", href: "/#features-section" },
   { label: "FAQ", href: "/#faq-section" },
   { label: "Contact Us", href: "/#contact" },

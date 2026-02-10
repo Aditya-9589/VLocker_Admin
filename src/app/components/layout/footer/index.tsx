@@ -13,23 +13,6 @@ const Footer = () => {
       <div className="container relative z-10 pb-16">
         <div className="grid grid-cols-1 gap-y-10 md:gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8">
           <div className="lg:col-span-6 sm:col-span-2">
-            {/* <image
-              className="block h-12 w-20px mb-4"
-              // src={getImagePath("/images/logo/logo.svg")}
-              // alt="Crypto-Logo"
-              alt="VLocker-Logo"
-              src={LogoVLocker}
-            /> */}
-
-            {/* <Image
-              src={LogoVLocker}
-              alt="VLocker Logo"
-              width={160}
-              height={50}
-              className="mb-4"
-              priority
-            /> */}
-
             <Image
               src="/images/logo/VLocker_logo5.png"
               alt="VLocker Logo"
@@ -41,9 +24,9 @@ const Footer = () => {
 
             <p className="text-white/60 text-sm font-normal max-w-96 leading-7 mb-7">
               {" "}
-              Cryptocurrency is a type of virtual currency that uses
-              cryptography to secure transactions that are digitally recorded on
-              a distributed ledger, such as a blockchain.
+              VLocker is a smart device financing and management platform that
+              enables lenders to track EMIs, control device access, and ensure
+              secure, compliance-driven loan operations.
             </p>
             <div className="flex gap-4">
               {Sociallinkdata.map((items, i) => (
@@ -90,7 +73,7 @@ const Footer = () => {
                 width={20}
                 height={20}
               />
-              (406) 555-012
+              +91 98765 43210
             </Link>
             <Link
               href={"mailto:tim.jennings@example.com"}
@@ -102,7 +85,7 @@ const Footer = () => {
                 width={20}
                 height={20}
               />
-              tim.jennings@example.com
+              support@vlocker.in
             </Link>
             <div className="text-white/60 text-sm font-normal mb-6 flex gap-2">
               <Image
@@ -111,22 +94,24 @@ const Footer = () => {
                 width={20}
                 height={20}
               />
-              Elgin St. Celina, Delaware 10299
+              Corporate Office, India
             </div>
           </div>
         </div>
       </div>
       <div className="py-8 px-4 border-t border-t-lightblue">
         <p className="text-center text-white">
-          @2025 - All Rights Reserved by{" "}
-          <Link
+          {/* @2025 - All Rights Reserved by{" "} */}
+          {/* <Link
             href="https://getnextjstemplates.com/"
             target="_blank"
             className="hover:text-primary"
           >
             {" "}
             GetNextJs Templates.com
-          </Link>
+          </Link> */}
+          
+          © 2025 VLocker. All Rights Reserved.
         </p>
       </div>
     </footer>

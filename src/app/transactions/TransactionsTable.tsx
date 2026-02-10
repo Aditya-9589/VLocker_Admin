@@ -102,11 +102,6 @@ export default function TransactionsTable() {
         </thead>
 
         <tbody>
-          {/* {transactions.map((t) => (
-            <tr
-              key={t.id}
-              className="border-t border-border hover:bg-darkmode/60 transition"
-            > */}
 
           {currentData.map((t) => (
             <tr

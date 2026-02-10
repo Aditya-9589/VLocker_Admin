@@ -1,92 +1,61 @@
+
 "use client";
-import { getImagePath } from "@/lib/utils/imagePath";
-import { Icon } from "@iconify/react/dist/iconify.js";
+
 import Image from "next/image";
-import { useState } from "react";
+import { getImagePath } from "@/lib/utils/imagePath";
 
 const Banner = () => {
-  const [isOpen, setOpen] = useState(false);
-
-  const openModal = () => {
-    setOpen(true);
-  };
-
-  const closeModal = () => {
-    setOpen(false);
-  };
-
   return (
-    <section className="relative pb-0" id="home-section">
-      <div className="bg-banner-image absolute w-full h-full top-0 blur-390"></div>
-      <div className="overflow-hidden">
-        <div className="container lg:pt-20 pt-10 relative">
-          <div className="relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-12 my-16 items-center">
-              <div className="lg:col-span-7 mb-16">
-                <h1 className="mb-5 lg:text-start text-center sm:leading-snug leading-tight capitalize">
-                  Buy, Sell & Accept <br /> Cryptocurrency with Ease
-                </h1>
-                <p className="text-white font-normal mb-10 max-w-[70%] lg:text-start text-center lg:mx-0 mx-auto capitalize">
-                  A fast, secure, and user-friendly platform to trade Bitcoin,
-                  Ethereum, and other digital assets. Join millions embracing
-                  the future of finance.
-                </p>
-                <div className="flex align-middle justify-center lg:justify-start">
-                  <button className="text-xl font-semibold text-white py-4 px-6 lg:px-12 bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary rounded-xl mr-6 cursor-pointer">
-                    Get Started
-                  </button>
-                  <button
-                    onClick={openModal}
-                    className="bg-transparent flex justify-center items-center text-white cursor-pointer"
-                  >
-                    <Image
-                      src={getImagePath("/images/banner/playbutton.svg")}
-                      alt="button-image"
-                      className="mr-3"
-                      width={47}
-                      height={47}
-                    />
-                    <span className="hover:text-primary">How It Work</span>
-                  </button>
-                </div>
-              </div>
-              <div className="lg:col-span-5 lg:-m-48 -m-20 overflow-hidden">
-                <Image
-                  src={getImagePath("/images/banner/banner.png")}
-                  alt="nothing"
-                  width={1013}
-                  height={760}
-                />
-              </div>
+    <section id="home-section" className="relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="bg-banner-image absolute inset-0 blur-390"></div>
+
+      <div className="container relative z-10 lg:pt-24 pt-14 pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10">
+          {/* Left Content */}
+          <div className="lg:col-span-6 text-center lg:text-left">
+            <h1 className="mb-6 leading-tight">
+              Smart Device Financing.
+              <br />
+              Secure Payments.
+              <br />
+              Total Control.
+            </h1>
+
+            <p className="text-white/80 text-lg mb-10 max-w-xl mx-auto lg:mx-0">
+              VLocker empowers lenders with real-time EMI tracking, automated
+              device locking, and complete loan visibility — built for scale,
+              security, and control.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <button className="px-10 py-4 text-lg font-semibold rounded-xl text-white bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary transition">
+                Get Started
+              </button>
+
+              <a
+                href="#features-section"
+                className="text-white/80 hover:text-primary transition text-lg font-medium"
+              >
+                View Features →
+              </a>
             </div>
+          </div>
+
+          {/* Right Image */}
+          <div className="lg:col-span-6 flex justify-center lg:justify-end">
+            <Image
+              src={getImagePath("/images/logo/VLocker_Logo5.png")}
+              // src={getImagePath("/images/logo/VLocker_Logo2.png")}
+              alt="VLocker App Preview"
+              width={800}
+              height={1000}
+              priority
+              className="drop-shadow-2xl"
+            />
           </div>
         </div>
       </div>
-      {isOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-gradient-to-br from-primary to-secondary rounded-lg sm:m-0 m-4">
-            <div className="overlay flex items-center justify-between border-b border-solid border-border p-5 z-50 backdrop-blur-sm">
-              <h3 className="text-white">How It Works</h3>
-              <button onClick={closeModal} className="inline-block dark:invert">
-                <Icon
-                  icon="tabler:circle-x"
-                  className="text-2xl text-white hover:cursor-pointer hover:text-primary"
-                />
-              </button>
-            </div>
-            <iframe
-              height="400"
-              className="p-4 md:w-[50rem] w-full"
-              src="https://www.youtube.com/embed/xAAEiykov1w?si=7Keuu5t0oJzZ67Q-"
-              title="How Our Product Works"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-      )}
     </section>
   );
 };

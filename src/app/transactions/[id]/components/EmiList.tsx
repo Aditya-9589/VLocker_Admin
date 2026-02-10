@@ -1,13 +1,4 @@
 
-// import EmiCard from "./EmiCard";
-
-// interface Emi {
-//   id: number;
-//   amount: number;
-//   date: string;
-//   installmentId: number;
-//   status: "COMPLETED" | "PENDING" | "UPCOMING";
-// }
 
 import { Emi } from "@/app/types/emi";
 import EmiCard from "./EmiCard";

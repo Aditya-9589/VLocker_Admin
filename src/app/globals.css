@@ -22,9 +22,9 @@
   /* background color for transactions page */
   --color-transactions-bg: #050F29;
 
-  /* card colours  */
-  /* --color-card-bg: #0e1f4f; */
-  --color-card-bg: #040a24;
+  /* card colours for service page */
+  --color-card-bg: #0e1f4f;
+  /* --color-card-bg: #040a24; */
 
   --blur-390: 390px;
 

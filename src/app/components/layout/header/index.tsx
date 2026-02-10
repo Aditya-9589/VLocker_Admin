@@ -1,11 +1,11 @@
 "use client";
+
 import { Headerdata } from "@/lib/data/pageData";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Signin from "../../auth/sign-in";
-import SignUp from "../../auth/sign-up";
-// import Logo from "./logo";
+// import SignUp from "../../auth/sign-up";
 import Logo from "./logo";
 import HeaderLink from "./navigation/HeaderLink";
 import MobileHeaderLink from "./navigation/MobileHeaderLink";
@@ -14,11 +14,11 @@ const Header: React.FC = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
   const [isSignInOpen, setIsSignInOpen] = useState(false);
-  const [isSignUpOpen, setIsSignUpOpen] = useState(false);
+  // const [isSignUpOpen, setIsSignUpOpen] = useState(false);
 
   const navbarRef = useRef<HTMLDivElement>(null);
   const signInRef = useRef<HTMLDivElement>(null);
-  const signUpRef = useRef<HTMLDivElement>(null);
+  // const signUpRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
@@ -32,12 +32,11 @@ const Header: React.FC = () => {
     ) {
       setIsSignInOpen(false);
     }
-    if (
-      signUpRef.current &&
-      !signUpRef.current.contains(event.target as Node)
-    ) {
-      setIsSignUpOpen(false);
-    }
+    // if (
+    //   signUpRef.current && !signUpRef.current.contains(event.target as Node)
+    // ) {
+    //   setIsSignUpOpen(false);
+    // }
     if (
       mobileMenuRef.current &&
       !mobileMenuRef.current.contains(event.target as Node) &&
@@ -54,15 +53,18 @@ const Header: React.FC = () => {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [navbarOpen, isSignInOpen, isSignUpOpen]);
+    // }, [navbarOpen, isSignInOpen, isSignUpOpen]);
+  }, [navbarOpen, isSignInOpen]);
 
   useEffect(() => {
-    if (isSignInOpen || isSignUpOpen || navbarOpen) {
+    // if (isSignInOpen || isSignUpOpen || navbarOpen) {
+    if (isSignInOpen || navbarOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
-  }, [isSignInOpen, isSignUpOpen, navbarOpen]);
+    // }, [isSignInOpen, isSignUpOpen, navbarOpen]);
+  }, [isSignInOpen, navbarOpen]);
 
   return (
     <header
@@ -90,6 +92,18 @@ const Header: React.FC = () => {
             >
               Sign In
             </Link>
+
+            {/* Mobile Hamburger */}
+            <button
+              onClick={() => setNavbarOpen(true)}
+              className="block lg:hidden p-2 rounded-lg"
+              aria-label="Open menu"
+            >
+              <span className="block w-6 h-0.5 bg-white"></span>
+              <span className="block w-6 h-0.5 bg-white mt-1.5"></span>
+              <span className="block w-6 h-0.5 bg-white mt-1.5"></span>
+            </button>
+            
             {isSignInOpen && (
               <div className="fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50">
                 <div
@@ -110,44 +124,6 @@ const Header: React.FC = () => {
                 </div>
               </div>
             )}
-            <Link
-              href="#"
-              className="hidden lg:block text-white bg-linear-to-r from-secondary to-primary hover:from-primary hover:to-secondary duration-300 px-6 py-3 rounded-lg"
-              onClick={() => {
-                setIsSignUpOpen(true);
-              }}
-            >
-              Sign Up
-            </Link>
-            {isSignUpOpen && (
-              <div className="fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50">
-                <div
-                  ref={signUpRef}
-                  className="relative mx-auto w-full max-w-md bg-purple-950/80 overflow-hidden rounded-lg bg-simple-bg backdrop-blur-md px-8 pt-14 pb-8 text-center"
-                >
-                  <button
-                    onClick={() => setIsSignUpOpen(false)}
-                    className="absolute top-0 right-0 mr-8 mt-8 cursor-pointer"
-                    aria-label="Close Sign Up Modal"
-                  >
-                    <Icon
-                      icon="tabler:currency-xrp"
-                      className="text-white hover:text-primary text-24 inline-block me-2"
-                    />
-                  </button>
-                  <SignUp />
-                </div>
-              </div>
-            )}
-            <button
-              onClick={() => setNavbarOpen(!navbarOpen)}
-              className="block lg:hidden p-2 rounded-lg"
-              aria-label="Toggle mobile menu"
-            >
-              <span className="block w-6 h-0.5 bg-white"></span>
-              <span className="block w-6 h-0.5 bg-white mt-1.5"></span>
-              <span className="block w-6 h-0.5 bg-white mt-1.5"></span>
-            </button>
           </div>
         </div>
         {navbarOpen && (
@@ -190,16 +166,6 @@ const Header: React.FC = () => {
               >
                 Sign In
               </Link>
-              <Link
-                href="#"
-                className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-transparent border border-primary hover:text-primary"
-                onClick={() => {
-                  setIsSignUpOpen(true);
-                  setNavbarOpen(false);
-                }}
-              >
-                Sign Up
-              </Link>
             </div>
           </nav>
         </div>
@@ -209,3 +175,7 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+
+// =====================================================================================================
+
+// signup section removed

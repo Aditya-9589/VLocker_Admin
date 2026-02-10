@@ -17,9 +17,9 @@ const Faq = () => {
           Frequently Asked Questions
         </h2>
         <p className="text-center lg:text-lg font-normal text-lightblue max-w-2xl mx-auto">
-          Have questions about trading, security, or how our platform works?
-          Find clear answers to the most common inquiries to get started with
-          confidence.
+          Have questions about device financing, EMI management, or platform
+          security? Find clear answers to understand how VLocker helps you
+          manage loans and devices with confidence.
         </p>
         <div>
           <div className="grid lg:grid-cols-2 items-center">
@@ -52,13 +52,14 @@ const Faq = () => {
                 ))}
               </div>
             </div>
-            <div className="-m-48 absolute -right-32">
+            <div className="-m-48 absolute -right-32 hidden lg:block">
               <Image
                 src={getImagePath("/images/faq/faq.svg")}
                 alt="faq-image"
                 width={941}
                 height={379}
-                className="w-auto sm:block hidden"
+                // className="w-auto sm:block hidden"
+                className="w-auto"
               />
             </div>
           </div>

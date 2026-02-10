@@ -4,7 +4,7 @@ export const servicesData = [
         title: "Instant Loan Processing",
         description:
             "Apply, approve, and manage loans instantly with a secure and transparent process.",
-        icon: "💳", // later replace with SVG or icon component
+        icon: "💳", 
     },
     {
         id: 2,

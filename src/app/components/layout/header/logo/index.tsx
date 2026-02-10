@@ -1,8 +1,7 @@
 // import { getImagePath } from "@/lib/utils/imagePath";
+
 import Image from "next/image";
 import Link from "next/link";
-// import LogoVLocker from '/logo/VLocker_Logo.png'
-// import LogoVLocker from '../../../../../../public/images/logo/VLocker_Logo2.png'
 import LogoVLocker from '../../../../../../public/images/logo/VLocker_logo5.png'
 
 const Logo: React.FC = () => {
@@ -10,8 +9,6 @@ const Logo: React.FC = () => {
     <Link href="/">
       <Image
         // src={getImagePath("/images/logo/logo.svg")}
-        // width={160}
-        // height={50}
         src={LogoVLocker}
         alt="logo"
         width={160}
